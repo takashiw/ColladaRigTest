@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1688F9BC2074182F00F4FF13 /* ColladaRig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1688F9BB2074182E00F4FF13 /* ColladaRig.swift */; };
+		16DBC38B2072831300053680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DBC38A2072831300053680 /* AppDelegate.swift */; };
+		16DBC38D2072831300053680 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DBC38C2072831300053680 /* art.scnassets */; };
+		16DBC38F2072831300053680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DBC38E2072831300053680 /* ViewController.swift */; };
+		16DBC3922072831300053680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DBC3902072831300053680 /* Main.storyboard */; };
+		16DBC3942072831300053680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DBC3932072831300053680 /* Assets.xcassets */; };
+		16DBC3972072831300053680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DBC3952072831300053680 /* LaunchScreen.storyboard */; };
+		16DBC39F2072836500053680 /* NMARGameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DBC39E2072836500053680 /* NMARGameObject.swift */; };
+		16DBC3A12072838600053680 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DBC3A02072838600053680 /* Placeholder.swift */; };
+		16DBC3A3207287EB00053680 /* AnimatedRig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DBC3A2207287EB00053680 /* AnimatedRig.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1688F9BB2074182E00F4FF13 /* ColladaRig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColladaRig.swift; sourceTree = "<group>"; };
+		16DBC3872072831300053680 /* ColladaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColladaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16DBC38A2072831300053680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16DBC38C2072831300053680 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		16DBC38E2072831300053680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16DBC3912072831300053680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16DBC3932072831300053680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16DBC3962072831300053680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16DBC3982072831300053680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16DBC39E2072836500053680 /* NMARGameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMARGameObject.swift; sourceTree = "<group>"; };
+		16DBC3A02072838600053680 /* Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		16DBC3A2207287EB00053680 /* AnimatedRig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedRig.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16DBC3842072831300053680 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16DBC37E2072831300053680 = {
+			isa = PBXGroup;
+			children = (
+				16DBC3892072831300053680 /* ColladaTest */,
+				16DBC3882072831300053680 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16DBC3882072831300053680 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16DBC3872072831300053680 /* ColladaTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16DBC3892072831300053680 /* ColladaTest */ = {
+			isa = PBXGroup;
+			children = (
+				1688F9BB2074182E00F4FF13 /* ColladaRig.swift */,
+				16DBC3A02072838600053680 /* Placeholder.swift */,
+				16DBC39E2072836500053680 /* NMARGameObject.swift */,
+				16DBC38A2072831300053680 /* AppDelegate.swift */,
+				16DBC3A2207287EB00053680 /* AnimatedRig.swift */,
+				16DBC38C2072831300053680 /* art.scnassets */,
+				16DBC38E2072831300053680 /* ViewController.swift */,
+				16DBC3902072831300053680 /* Main.storyboard */,
+				16DBC3932072831300053680 /* Assets.xcassets */,
+				16DBC3952072831300053680 /* LaunchScreen.storyboard */,
+				16DBC3982072831300053680 /* Info.plist */,
+			);
+			path = ColladaTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16DBC3862072831300053680 /* ColladaTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16DBC39B2072831300053680 /* Build configuration list for PBXNativeTarget "ColladaTest" */;
+			buildPhases = (
+				16DBC3832072831300053680 /* Sources */,
+				16DBC3842072831300053680 /* Frameworks */,
+				16DBC3852072831300053680 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColladaTest;
+			productName = ColladaTest;
+			productReference = 16DBC3872072831300053680 /* ColladaTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16DBC37F2072831300053680 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = armonster;
+				TargetAttributes = {
+					16DBC3862072831300053680 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 16DBC3822072831300053680 /* Build configuration list for PBXProject "ColladaTest" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16DBC37E2072831300053680;
+			productRefGroup = 16DBC3882072831300053680 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16DBC3862072831300053680 /* ColladaTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16DBC3852072831300053680 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16DBC38D2072831300053680 /* art.scnassets in Resources */,
+				16DBC3972072831300053680 /* LaunchScreen.storyboard in Resources */,
+				16DBC3942072831300053680 /* Assets.xcassets in Resources */,
+				16DBC3922072831300053680 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16DBC3832072831300053680 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16DBC38F2072831300053680 /* ViewController.swift in Sources */,
+				16DBC38B2072831300053680 /* AppDelegate.swift in Sources */,
+				16DBC39F2072836500053680 /* NMARGameObject.swift in Sources */,
+				16DBC3A12072838600053680 /* Placeholder.swift in Sources */,
+				16DBC3A3207287EB00053680 /* AnimatedRig.swift in Sources */,
+				1688F9BC2074182F00F4FF13 /* ColladaRig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		16DBC3902072831300053680 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16DBC3912072831300053680 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16DBC3952072831300053680 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16DBC3962072831300053680 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16DBC3992072831300053680 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16DBC39A2072831300053680 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16DBC39C2072831300053680 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XRLFC3F88;
+				INFOPLIST_FILE = ColladaTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.armonster.ColladaTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16DBC39D2072831300053680 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XRLFC3F88;
+				INFOPLIST_FILE = ColladaTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.armonster.ColladaTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16DBC3822072831300053680 /* Build configuration list for PBXProject "ColladaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16DBC3992072831300053680 /* Debug */,
+				16DBC39A2072831300053680 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16DBC39B2072831300053680 /* Build configuration list for PBXNativeTarget "ColladaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16DBC39C2072831300053680 /* Debug */,
+				16DBC39D2072831300053680 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16DBC37F2072831300053680 /* Project object */;
+}
