@@ -1,8 +1,8 @@
 //
-//  AnimatedRig.swift
+//  ColladaRig.swift
 //  AR Monster Battle
 //
-//  Created by Takashi Wickes on 2/1/18.
+//  Created by Takashi Wickes on 4/3/18.
 //  Copyright © 2018 takashiwickes. All rights reserved.
 //
 
@@ -13,9 +13,8 @@ class ColladaRig {
     let rootNode: SCNNode
 	let daeName: String
     var animations = [String: CAAnimation]()
-//	var crayAnimations = [String: [CAAnimation]]()
 	
-    init(modelNamed: String, daeNamed: String){
+    init(daeNamed: String){
 		self.daeName = daeNamed
 		
 		let idleScene = SCNScene(named: "art.scnassets/" + daeNamed + "/" + daeNamed + "Standing.dae")!
@@ -27,15 +26,19 @@ class ColladaRig {
 		
 		self.rootNode = SCNNode()
 		self.rootNode.addChildNode(node)
-		
-		self.loadAnimation(withKey: "Standing", sceneName: "art.scnassets/" + daeNamed + "/" + daeNamed + "Standing", animationIdentifier: daeNamed + "Standing-1")
-		self.playAnimation(named: .Standing)
-		
-		self.loadAnimation(withKey: "Attack_1", sceneName: "art.scnassets/" + daeNamed + "/" + daeNamed + "Attack_1", animationIdentifier: daeNamed + "Attack_1-1")
-		self.loadAnimation(withKey: "Intro", sceneName: "art.scnassets/" + daeNamed + "/" + daeNamed + "Intro", animationIdentifier: daeNamed + "Intro-1")
-		self.loadAnimation(withKey: "Faint", sceneName: "art.scnassets/" + daeNamed + "/" + daeNamed + "Faint", animationIdentifier: daeNamed + "Faint-1")
-		self.loadAnimation(withKey: "Hit", sceneName: "art.scnassets/" + daeNamed + "/" + daeNamed + "Hit", animationIdentifier: daeNamed + "Hit-1")
+		self.loadMonsterAnimations()
     }
+	
+	func loadMonsterAnimations() {
+		for animationState in MonsterAnimationStates.allValues {
+			if(animationState.rawValue == "Standing") {
+				continue;
+			}
+			self.loadAnimation(withKey: animationState.rawValue,
+							   sceneName: "art.scnassets/\(daeName)/\(daeName)" + animationState.rawValue,
+							   animationIdentifier: daeName + animationState.rawValue + "-1")
+		}
+	}
 	
 	func loadAnimation(withKey: String, sceneName:String, animationIdentifier:String) {
 		guard let sceneURL = Bundle.main.url(forResource: sceneName, withExtension: "dae") else {
@@ -45,7 +48,6 @@ class ColladaRig {
 		
 		if let animationObject = sceneSource?.entryWithIdentifier(animationIdentifier, withClass: CAAnimation.self) {
 			print("Animation Found! for " + animationIdentifier)
-			
 			// The animation will only play once
 			animationObject.repeatCount = 1
 			// To create smooth transitions between animations
@@ -59,17 +61,18 @@ class ColladaRig {
 		}
 	}
 	
-	public func playAnimation(named: MonsterAnimationStates, terminateAnimation: Bool = false) { //also works for armature
-		if let animation = animations[named.rawValue] {
-			print("Playing Animations for " + named.rawValue)
-			rootNode.addAnimation(animation, forKey: named.rawValue)
+	public func playAnimation(for state: MonsterAnimationStates, terminateAnimation: Bool = false) { //also works for armature
+		if let animation = animations[state.rawValue] {
+			print("Playing Animations for " + state.rawValue)
+			rootNode.addAnimation(animation, forKey: state.rawValue)
 		}
 	}
     
-    func stopAnimation(named: String) {
-        if let animation = animations[named] {
-//            node.removeAnimation(forKey: named)
-        }
+    func stopAnimation(for state: MonsterAnimationStates) {
+		if let animation = animations[state.rawValue] {
+			print("Playing Animations for " + state.rawValue)
+			rootNode.removeAnimation(forKey: state.rawValue)
+		}
     }
 }
 

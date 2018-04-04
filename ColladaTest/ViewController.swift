@@ -87,21 +87,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 	
 	@objc private func attackButtonTapped() {
-		self.placeHolder.collada?.playAnimation(named: .Attack_1)
+		self.placeHolder.collada?.playAnimation(for: .Attack_1)
 	}
 	
 	
 	@objc private func introButtonTapped() {
-		self.placeHolder.collada?.playAnimation(named: .Intro)
+		self.placeHolder.collada?.playAnimation(for: .Intro)
 	}
 	
 	@objc private func hitButtonTapped() {
-		self.placeHolder.collada?.playAnimation(named: .Hit)
+		self.placeHolder.collada?.playAnimation(for: .Hit)
 	}
 	
 	
 	@objc private func faintButtonTapped() {
-		self.placeHolder.collada?.playAnimation(named: .Faint)
+		self.placeHolder.collada?.playAnimation(for: .Faint)
 	}
     
     override func viewWillAppear(_ animated: Bool) {
