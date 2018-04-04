@@ -19,7 +19,7 @@ class Placeholder: NMARGameObject {
 	
 	init(id: String) {
 		self.id = id
-		collada = ColladaRig(modelNamed: "polygon1_mat1" , daeNamed: "Machop")
+		collada = ColladaRig(modelNamed: "polygon1_mat1" , daeNamed: "Squirtle")
 	}
 	
 	func getSCNNode() -> SCNNode? {

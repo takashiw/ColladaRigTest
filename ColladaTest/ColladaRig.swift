@@ -38,18 +38,24 @@ class ColladaRig {
     }
 	
 	func loadAnimation(withKey: String, sceneName:String, animationIdentifier:String) {
-		let sceneURL = Bundle.main.url(forResource: sceneName, withExtension: "dae")
-		let sceneSource = SCNSceneSource(url: sceneURL!, options: nil)
+		guard let sceneURL = Bundle.main.url(forResource: sceneName, withExtension: "dae") else {
+			return
+		}
+		let sceneSource = SCNSceneSource(url: sceneURL, options: nil)
 		
 		if let animationObject = sceneSource?.entryWithIdentifier(animationIdentifier, withClass: CAAnimation.self) {
+			print("Animation Found! for " + animationIdentifier)
+			
 			// The animation will only play once
 			animationObject.repeatCount = 1
 			// To create smooth transitions between animations
-			animationObject.fadeInDuration = CGFloat(0)
-			animationObject.fadeOutDuration = CGFloat(0)
+			animationObject.fadeInDuration = CGFloat(0.3)
+			animationObject.fadeOutDuration = CGFloat(0.5)
 			
 			// Store the animation for later use
 			animations[withKey] = animationObject
+		} else {
+			print("Animation not found for " + animationIdentifier)
 		}
 	}
 	
