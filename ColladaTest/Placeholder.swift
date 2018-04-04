@@ -19,7 +19,7 @@ class Placeholder: NMARGameObject {
 	
 	init(id: String) {
 		self.id = id
-		collada = ColladaRig(daeNamed: "Squirtle")
+		collada = ColladaRig(daeNamed: "Machop")
 	}
 	
 	func getSCNNode() -> SCNNode? {
@@ -32,7 +32,7 @@ class Placeholder: NMARGameObject {
 //		let blueCube = SCNNode(geometry: blueBox)
 //		blueCube.name = getNodeName()
 		myNode = collada?.rootNode
-		myNode?.scale = SCNVector3(x: 0.1, y: 0.1, z: 0.1)
+		print(myNode?.scale)
 		return myNode
 	}
 	
