@@ -19,20 +19,12 @@ class Placeholder: NMARGameObject {
 	
 	init(id: String) {
 		self.id = id
-		collada = ColladaRig(daeNamed: "Machop")
+		collada = ColladaRig(daeNamed: "Squirtle")
 	}
 	
 	func getSCNNode() -> SCNNode? {
 		if myNode != nil { return myNode }
-		
-//		let blueBox: SCNBox = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
-//		let blue: SCNMaterial = SCNMaterial()
-//		blue.diffuse.contents = UIColor.blue
-//		blueBox.firstMaterial = blue
-//		let blueCube = SCNNode(geometry: blueBox)
-//		blueCube.name = getNodeName()
 		myNode = collada?.rootNode
-		print(myNode?.scale)
 		return myNode
 	}
 	

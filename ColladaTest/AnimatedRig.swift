@@ -9,16 +9,6 @@
 import Foundation
 import SceneKit
 
-enum MonsterAnimationStates: String {
-	case Standing
-	case Faint
-	case Hit
-	case Intro
-	case Attack_1
-	
-	static let allValues = [Standing, Faint, Hit, Intro, Attack_1]
-}
-
 class AnimatedRig {
     let node: SCNNode
 	let daeName: String
@@ -47,7 +37,7 @@ class AnimatedRig {
         //store and trigger the "rest" animation
 //		loadAnimation(withKey: "rest", daeNamed: self.daeName + , repeating: true)
 		loadMonsterAnimations(sceneSource: sceneSource!)
-		playAnimation(named: .Standing)
+//		playAnimation(named: .Standing)
 //        playAnimation(named: "Standing")
     }
 	

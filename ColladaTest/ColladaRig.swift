@@ -9,6 +9,16 @@
 import Foundation
 import SceneKit
 
+enum MonsterAnimationStates: String {
+	case Standing
+	case Faint
+	case Hit
+	case Intro
+	case Attack_1
+	
+	static let allValues = [Faint, Hit, Intro, Attack_1]
+}
+
 class ColladaRig {
     let rootNode: SCNNode
 	let daeName: String
@@ -31,9 +41,6 @@ class ColladaRig {
 	
 	func loadMonsterAnimations() {
 		for animationState in MonsterAnimationStates.allValues {
-			if(animationState.rawValue == "Standing") {
-				continue;
-			}
 			self.loadAnimation(withKey: animationState.rawValue,
 							   sceneName: "art.scnassets/\(daeName)/\(daeName)" + animationState.rawValue,
 							   animationIdentifier: daeName + animationState.rawValue + "-1")
