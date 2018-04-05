@@ -20,24 +20,37 @@ enum MonsterAnimationStates: String {
 }
 
 class ColladaRig {
-    let rootNode: SCNNode
+	let rootNode: SCNNode
 	let daeName: String
-    var animations = [String: CAAnimation]()
+	var animations = [String: CAAnimation]()
+	var idleAnimationPlayer: SCNAnimationPlayer!
 	
-    init(daeNamed: String){
+	init(daeNamed: String, scale: SCNVector3 = SCNVector3(1, 1, 1), repeatIdleAnimation: Bool = true){
 		self.daeName = daeNamed
 		
 		let idleScene = SCNScene(named: "art.scnassets/" + daeNamed + "/" + daeNamed + "Standing.dae")!
 		let node = SCNNode()
 		
 		for childNode in idleScene.rootNode.childNodes {
+			if(!childNode.animationKeys.isEmpty) {
+				if(!repeatIdleAnimation) {
+					let animationPlayer = childNode.animationPlayer(forKey: childNode.animationKeys[0])
+					animationPlayer?.animation.repeatCount = 1
+					animationPlayer?.animation.isRemovedOnCompletion = false
+					animationPlayer?.animation.isAppliedOnCompletion = true
+					childNode.addAnimationPlayer(animationPlayer!, forKey: "idle")
+					self.idleAnimationPlayer = animationPlayer
+					self.idleAnimationPlayer.stop()
+					self.idleAnimationPlayer.speed = 0
+				}
+			}
 			node.addChildNode(childNode)
 		}
-		
+		node.scale = scale
 		self.rootNode = SCNNode()
 		self.rootNode.addChildNode(node)
 		self.loadMonsterAnimations()
-    }
+	}
 	
 	func loadMonsterAnimations() {
 		for animationState in MonsterAnimationStates.allValues {
@@ -74,12 +87,17 @@ class ColladaRig {
 			rootNode.addAnimation(animation, forKey: state.rawValue)
 		}
 	}
-    
-    func stopAnimation(for state: MonsterAnimationStates) {
+	
+	public func playIdleAnimation(speed: CGFloat = 1) {
+		self.idleAnimationPlayer.speed = speed
+		self.idleAnimationPlayer.play()
+	}
+	
+	func stopAnimation(for state: MonsterAnimationStates) {
 		if let animation = animations[state.rawValue] {
 			print("Playing Animations for " + state.rawValue)
 			rootNode.removeAnimation(forKey: state.rawValue)
 		}
-    }
+	}
 }
 

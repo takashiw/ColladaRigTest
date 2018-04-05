@@ -19,12 +19,16 @@ class Placeholder: NMARGameObject {
 	
 	init(id: String) {
 		self.id = id
-		collada = ColladaRig(daeNamed: "Squirtle")
+//		collada = ColladaRig(daeNamed: "Intro", scale: SCNVector3(0.1, 0.1, 0.1), repeatIdleAnimation: false)
+		collada = ColladaRig(daeNamed: "Pokeball", repeatIdleAnimation: false)
+//		collada = ColladaRig(daeNamed: "Squirtle")
+
 	}
 	
 	func getSCNNode() -> SCNNode? {
 		if myNode != nil { return myNode }
 		myNode = collada?.rootNode
+//		myNode?.scale = SCNVector3Make(0.1, 0.1, 0.1)
 		return myNode
 	}
 	

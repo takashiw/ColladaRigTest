@@ -87,7 +87,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 	
 	@objc private func attackButtonTapped() {
-		self.placeHolder.collada?.playAnimation(for: .Attack_1)
+		if(self.placeHolder.collada?.idleAnimationPlayer.speed == 1) {
+			self.placeHolder.collada?.playIdleAnimation(speed: -1)
+		} else {
+			self.placeHolder.collada?.playIdleAnimation()
+		}
 	}
 	
 	
@@ -101,7 +105,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 	
 	
 	@objc private func faintButtonTapped() {
-		self.placeHolder.collada?.playAnimation(for: .Faint)
+		self.placeHolder.collada?.playAnimation(for: .Faint, terminateAnimation: true)
 	}
     
     override func viewWillAppear(_ animated: Bool) {
