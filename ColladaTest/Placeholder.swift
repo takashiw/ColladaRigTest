@@ -19,8 +19,8 @@ class Placeholder: NMARGameObject {
 	
 	init(id: String) {
 		self.id = id
-//		collada = ColladaRig(daeNamed: "Intro", scale: SCNVector3(0.1, 0.1, 0.1), repeatIdleAnimation: false)
-		collada = ColladaRig(daeNamed: "Pokeball", repeatIdleAnimation: false)
+		collada = ColladaRig(daeNamed: "Intro", scale: SCNVector3(0.04, 0.04, 0.04), repeatIdleAnimation: false)
+//		collada = ColladaRig(daeNamed: "Pokeball", repeatIdleAnimation: false)
 //		collada = ColladaRig(daeNamed: "Squirtle")
 
 	}
